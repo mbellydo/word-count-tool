@@ -1,9 +1,10 @@
-let button = document.getElementById('btn');
+$(document).ready(function(){
+    $("#btn").click(function(){
+        var str = $('#str').val().split('')
+        console.log(str.length)
 
-button.addEventListener('click', function(){
-    let word = document.getElementById('str').value;
-    let count = word.length;
-    let outputDiv = document.getElementById('output');
-
-    outputDiv.innerHTML = `<h1>${count}</h1>`
-});
+        var output = $("#output")
+        output.text(str.length)
+        output.css({"font-size": "30px", "font-weight":"bold"});
+      });
+  });
